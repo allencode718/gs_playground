@@ -7,12 +7,30 @@ import time
 from collections import deque
 from pathlib import Path
 
-os.environ.setdefault("TORCH_CUDA_ARCH_LIST", "8.9")
 from typing import Dict, Optional, Tuple
 
 import motrixsim as mx
 import numpy as np
 import torch
+
+
+def configure_torch_cuda_arch_list() -> None:
+    if os.environ.get("TORCH_CUDA_ARCH_LIST"):
+        return
+    if not torch.cuda.is_available():
+        return
+
+    archs = {
+        f"{major}.{minor}"
+        for device_idx in range(torch.cuda.device_count())
+        for major, minor in [torch.cuda.get_device_capability(device_idx)]
+    }
+    if archs:
+        os.environ["TORCH_CUDA_ARCH_LIST"] = ";".join(sorted(archs))
+
+
+configure_torch_cuda_arch_list()
+
 from gaussian_renderer import BatchSplatConfig, MtxBatchSplatRenderer
 from motrixsim import SceneData, forward_kinematic
 from motrixsim.render import RenderApp
