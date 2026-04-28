@@ -1,10 +1,8 @@
-# GS-Playground
+<h1 align="center">GS-Playground</h1>
+
+<h3 align="center">A High-Throughput Photorealistic Simulator for Vision-Informed Robot Learning</h3>
 
 语言：[English](README.md) | 简体中文
-
-<p align="center">
-  <strong>GS-Playground: A High-Throughput Photorealistic Simulator for Vision-Informed Robot Learning</strong>
-</p>
 
 <p align="center">
   <a href="https://gsplayground.github.io"><img src="https://img.shields.io/badge/project-page-brightgreen" alt="Project Page"></a>
@@ -28,7 +26,6 @@ GS-Playground 是面向视觉机器人学习的高吞吐、高保真仿真框架
 ## 📰 新闻
 
 - **2026-04-28:** GS-Playground 已被 **RSS 2026** 接收。
-- **2026-04-29:** arXiv badge/link 已占位，预印本公开后会更新。
 
 ## ✨ 亮点
 
@@ -46,7 +43,6 @@ GS-Playground 是面向视觉机器人学习的高吞吐、高保真仿真框架
 - [x] `benchmark/`：最小 batch rendering notebook 和辅助脚本。
 - [x] `demo/live_demo/`：最小 replay demo，包含 Franka/Robotiq 本地资产和 replay 数据。
 - [x] `demo/navigation/`：最小机器人导航 demo，包含 Go1、Go2、G1 策略资产。
-- [x] `pyproject.toml` 和 `uv.lock`：当前 benchmark 和 demo 共用的环境定义。
 
 大规模训练流水线、完整 benchmark、生成式 3DGS 资产集合、Real2Sim 工具和论文实验配置尚未包含在当前预览版本中。
 
@@ -55,7 +51,9 @@ GS-Playground 是面向视觉机器人学习的高吞吐、高保真仿真框架
 以下命令均在仓库根目录执行。
 
 ```bash
+# 如果已经安装过 uv，跳过这一行。
 curl -LsSf https://astral.sh/uv/install.sh | sh
+
 git clone https://github.com/discoverse-dev/gs_playground.git
 cd gs_playground
 UV_CACHE_DIR=.uv-cache uv sync --reinstall-package motrixsim-core
@@ -100,12 +98,6 @@ UV_CACHE_DIR=.uv-cache uv run python -m ipykernel install \
 
 论文系统比当前预览仓库更完整，后续计划发布：
 
-- [x] 最小 batch rendering benchmark。
-- [x] 最小 live replay demo。
-- [x] 最小 navigation demo。
-- [x] README teaser 和项目链接。
-- [ ] 预印本在 **2026-04-29** 公开后更新 arXiv 链接。
-- [ ] arXiv 记录稳定后补充 citation metadata。
 - [ ] 核心 simulator API：batched robot simulation、同步 3DGS 观测、RGB/depth camera、contact 和 MJCF 兼容资产接口。
 - [ ] Batch 3DGS renderer：优化渲染 kernel、剪枝工具、内存高效资产加载、多场景 batch 示例。
 - [ ] Real2Sim 工具：场景/物体分割、inpainting、3DGS/mesh 重建、位姿对齐、碰撞同步和资产打包。
