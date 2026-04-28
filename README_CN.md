@@ -114,12 +114,6 @@ UV_CACHE_DIR=.uv-cache uv run python -m ipykernel install \
 - [ ] Benchmark suite：RSS 2026 论文中的 visual fidelity、rendering throughput、physics stability、locomotion、navigation 和 manipulation 复现实验。
 - [ ] Hugging Face 发布：压缩 3DGS 资产、示例场景、机器人资产、训练策略和评测轨迹。
 
-## 📚 Citation
-
-```bibtex
-
-```
-
 ## 🔗 相关项目
 
 GS-Playground 建立在我们生态中的多个组件和前序系统之上。它们目前尚未完整整合进这个预览仓库；后续 release 会将 RSS 2026 论文中涉及的物理、渲染、传感和学习接口逐步统一到 GS-Playground 工作流中。
@@ -129,3 +123,9 @@ GS-Playground 建立在我们生态中的多个组件和前序系统之上。它
 - **RLGK 渲染：** [GaussianRenderer](https://github.com/discoverse-dev/GaussianRenderer) 包含与 Rigid-Link Gaussian Kinematics 相关的 Gaussian rendering 组件。
 - **Batch LiDAR：** [MuJoCo-LiDAR](https://github.com/discoverse-dev/MuJoCo-LiDAR) 是我们此前的 batch LiDAR 模块；GS-Playground 的传感器套件会沿着这条工作整合到 navigation 和 locomotion 任务中。
 - **上一代平台：** [DISCOVERSE](https://github.com/discoverse-dev/discoverse/) 是我们此前的具身仿真平台。GS-Playground 可以看作 DISCOVERSE 的下一代高保真、高吞吐版本。
+
+## 📚 Citation
+
+```bibtex
+
+```

@@ -114,12 +114,6 @@ The paper system is larger than this preview repository. Planned releases:
 - [ ] Benchmark suite for visual fidelity, rendering throughput, physics stability, locomotion, navigation, and manipulation experiments from the RSS 2026 paper.
 - [ ] Hugging Face release with compressed 3DGS assets, example scenes, robot assets, trained policies, and evaluation traces.
 
-## 📚 Citation
-
-```bibtex
-
-```
-
 ## 🔗 Related Projects
 
 GS-Playground builds on several components and prior systems from our ecosystem. They are not fully integrated into this preview repository yet; future releases will consolidate the relevant physics, rendering, sensing, and learning interfaces into the GS-Playground workflow described in the RSS 2026 paper.
@@ -129,3 +123,9 @@ GS-Playground builds on several components and prior systems from our ecosystem.
 - **RLGK rendering:** [GaussianRenderer](https://github.com/discoverse-dev/GaussianRenderer) includes the Gaussian rendering components related to Rigid-Link Gaussian Kinematics.
 - **Batch LiDAR:** [MuJoCo-LiDAR](https://github.com/discoverse-dev/MuJoCo-LiDAR) is our earlier batch LiDAR module; the GS-Playground sensor suite will integrate this line of work for navigation and locomotion tasks.
 - **Previous-generation platform:** [DISCOVERSE](https://github.com/discoverse-dev/discoverse/) is our earlier embodied simulation platform. GS-Playground can be viewed as a next-generation, photorealistic and high-throughput successor to DISCOVERSE.
+
+## 📚 Citation
+
+```bibtex
+
+```
