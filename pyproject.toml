@@ -1,5 +1,5 @@
 [project]
-name = "gsp-render-dev"
+name = "gsplayground"
 version = "0.1.0"
 description = "Unified MotrixSim 3D Gaussian rendering demos and benchmark notebooks"
 readme = "README.md"
