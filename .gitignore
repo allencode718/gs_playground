@@ -33,6 +33,7 @@ htmlcov/
 # Project outputs
 demo/live_demo/shot/
 demo/live_demo/captures/
+data/navigation/
 benchmark/outputs/
 
 # Local tool/runtime artifacts

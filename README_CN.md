@@ -9,6 +9,9 @@
 ## 安装
 
 ```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+git clone https://github.com/discoverse-dev/gs_playground.git
+cd gs_playground
 UV_CACHE_DIR=.uv-cache uv sync --reinstall-package motrixsim-core
 ```
 
@@ -28,6 +31,12 @@ UV_CACHE_DIR=.uv-cache uv run jupyter nbconvert \
   --output mtx_batch_minimal.executed.ipynb
 ```
 
+## Navigation Demo
+
+```bash
+UV_CACHE_DIR=.uv-cache uv run python demo/navigation/robot_locomotion.py --robot go2 --scene nav_scene_1/mjcf/scene.xml --gs_ply nav_scene_1/3dgs/point_cloud.ply
+```
+
 ## Jupyter Kernel
 
 ```bash
@@ -44,11 +53,13 @@ UV_CACHE_DIR=.uv-cache uv run python -m ipykernel install \
 - `torch==2.4.1+cu121`
 - `gaussian_renderer==0.2.0`
 - `gsplat==1.5.3`
+- `onnxruntime==1.22.1`
 - 完整依赖见 `pyproject.toml`。
 
 ## 目录说明
 
 - `demo/live_demo/`：live replay demo、demo 资产和 replay 数据
+- `demo/navigation/`：键盘控制机器人导航 demo、策略文件、场景资产和机器人资产
 - `benchmark/`：batch rendering notebook、benchmark 资产、辅助脚本和输出
 - `pyproject.toml`：两个 demo 共用的统一 uv 环境
 - `.uv-cache/`：上面命令会使用的本地 uv 缓存目录
