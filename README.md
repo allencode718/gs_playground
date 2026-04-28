@@ -129,7 +129,3 @@ GS-Playground builds on several components and prior systems from our ecosystem.
 - **RLGK rendering:** [GaussianRenderer](https://github.com/discoverse-dev/GaussianRenderer) includes the Gaussian rendering components related to Rigid-Link Gaussian Kinematics.
 - **Batch LiDAR:** [MuJoCo-LiDAR](https://github.com/discoverse-dev/MuJoCo-LiDAR) is our earlier batch LiDAR module; the GS-Playground sensor suite will integrate this line of work for navigation and locomotion tasks.
 - **Previous-generation platform:** [DISCOVERSE](https://github.com/discoverse-dev/discoverse/) is our earlier embodied simulation platform. GS-Playground can be viewed as a next-generation, photorealistic and high-throughput successor to DISCOVERSE.
-
-## 🙏 Acknowledgements
-
-This repository is part of the GS-Playground project accepted to RSS 2026. Please refer to the project page for the latest paper, videos, assets, and release updates.

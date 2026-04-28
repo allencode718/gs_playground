@@ -129,7 +129,3 @@ GS-Playground 建立在我们生态中的多个组件和前序系统之上。它
 - **RLGK 渲染：** [GaussianRenderer](https://github.com/discoverse-dev/GaussianRenderer) 包含与 Rigid-Link Gaussian Kinematics 相关的 Gaussian rendering 组件。
 - **Batch LiDAR：** [MuJoCo-LiDAR](https://github.com/discoverse-dev/MuJoCo-LiDAR) 是我们此前的 batch LiDAR 模块；GS-Playground 的传感器套件会沿着这条工作整合到 navigation 和 locomotion 任务中。
 - **上一代平台：** [DISCOVERSE](https://github.com/discoverse-dev/discoverse/) 是我们此前的具身仿真平台。GS-Playground 可以看作 DISCOVERSE 的下一代高保真、高吞吐版本。
-
-## 🙏 致谢
-
-本仓库是 RSS 2026 接收论文 GS-Playground 的项目仓库。最新论文、视频、资产和 release 信息请以项目主页为准。
