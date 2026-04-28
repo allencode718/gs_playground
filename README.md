@@ -1,10 +1,8 @@
-# GS-Playground
+<h1 align="center">GS-Playground</h1>
+
+<h3 align="center">A High-Throughput Photorealistic Simulator for Vision-Informed Robot Learning</h3>
 
 Languages: English | [简体中文](README_CN.md)
-
-<p align="center">
-  <strong>GS-Playground: A High-Throughput Photorealistic Simulator for Vision-Informed Robot Learning</strong>
-</p>
 
 <p align="center">
   <a href="https://gsplayground.github.io"><img src="https://img.shields.io/badge/project-page-brightgreen" alt="Project Page"></a>
@@ -28,7 +26,6 @@ This repository is currently an early public preview. It contains a minimal batc
 ## 📰 News
 
 - **2026-04-28:** GS-Playground was accepted to **RSS 2026**.
-- **2026-04-29:** The arXiv badge/link is reserved and will be updated after the preprint is public.
 
 ## ✨ Highlights
 
@@ -46,7 +43,6 @@ The current repository is intentionally small and intended for early reproductio
 - [x] `benchmark/`: minimal batch rendering notebook and helper scripts.
 - [x] `demo/live_demo/`: minimal replay demo with local Franka/Robotiq assets and replay data.
 - [x] `demo/navigation/`: minimal robot navigation demo with Go1, Go2, and G1 policy assets.
-- [x] `pyproject.toml` and `uv.lock`: shared environment definition for the released benchmark and demos.
 
 Large-scale training pipelines, full benchmark suites, generated 3DGS asset collections, Real2Sim tools, and paper experiment configurations are not included in this preview release yet.
 
@@ -55,7 +51,9 @@ Large-scale training pipelines, full benchmark suites, generated 3DGS asset coll
 Run all commands from this repository root.
 
 ```bash
+# Skip this line if uv is already installed.
 curl -LsSf https://astral.sh/uv/install.sh | sh
+
 git clone https://github.com/discoverse-dev/gs_playground.git
 cd gs_playground
 UV_CACHE_DIR=.uv-cache uv sync --reinstall-package motrixsim-core
@@ -74,7 +72,8 @@ UV_CACHE_DIR=.uv-cache uv run python demo/live_demo/replay.py
 ### Navigation Demo
 
 ```bash
-UV_CACHE_DIR=.uv-cache uv run python demo/navigation/robot_locomotion.py --robot go2 --scene nav_scene_1/mjcf/scene.xml --gs_ply nav_scene_1/3dgs/point_cloud.ply
+UV_CACHE_DIR=.uv-cache uv run python demo/navigation/robot_locomotion.py --config configs/go2_scene1.json
+UV_CACHE_DIR=.uv-cache uv run python demo/navigation/robot_locomotion.py --config configs/g1_scene1.json
 ```
 
 ### Batch Rendering Benchmark
@@ -100,12 +99,6 @@ UV_CACHE_DIR=.uv-cache uv run python -m ipykernel install \
 
 The paper system is larger than this preview repository. Planned releases:
 
-- [x] Minimal batch rendering benchmark.
-- [x] Minimal live replay demo.
-- [x] Minimal navigation demo.
-- [x] README teaser and project links.
-- [ ] arXiv link update after the preprint is public on **2026-04-29**.
-- [ ] Citation metadata after the arXiv record is finalized.
 - [ ] Core simulator API for batched robot simulation, synchronized 3DGS observations, RGB/depth cameras, contacts, and MJCF-compatible assets.
 - [ ] Batch 3DGS renderer kernels, pruning utilities, memory-efficient asset loading, and multi-scene batching examples.
 - [ ] Real2Sim tools for scene/object segmentation, inpainting, 3DGS/mesh reconstruction, pose alignment, collision synchronization, and asset packaging.

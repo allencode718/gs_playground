@@ -1,0 +1,21 @@
+{
+  "robot": "g1",
+  "scene": "nav_scene_1/mjcf/scene.xml",
+  "scene_gaussians": {
+    "scene": "nav_scene_1/3dgs/point_cloud.ply"
+  },
+  "assets_dir": "assets",
+  "robot_gs_dir": "assets/g1",
+  "save_dir": "data/navigation_g1",
+  "prompt": "Navigate in the scene",
+  "auto_reset": false,
+  "initial_qpos": [
+    0, 0, 0.755,
+    0, 0, 0, 1,
+    -0.312, 0, 0, 0.669, -0.363, 0,
+    -0.312, 0, 0, 0.669, -0.363, 0,
+    0, 0, 0.073,
+    0.2, 0.2, 0, 0.6, 0, 0, 0,
+    0.2, -0.2, 0, 0.6, 0, 0, 0
+  ]
+}

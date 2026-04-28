@@ -30,10 +30,13 @@ htmlcov/
 .idea/
 .kiro/
 
+# macOS archive metadata
+__MACOSX/
+
 # Project outputs
 demo/live_demo/shot/
 demo/live_demo/captures/
-data/navigation/
+data/navigation*/
 benchmark/outputs/
 
 # Local tool/runtime artifacts
