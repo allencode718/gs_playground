@@ -120,5 +120,11 @@ GS-Playground 建立在我们生态中的多个组件和前序系统之上。它
 ## 📚 Citation
 
 ```bibtex
-
+@article{jia2025discoverse,
+      title={DISCOVERSE: Efficient Robot Simulation in Complex High-Fidelity Environments},
+      author={Yufei Jia and Guangyu Wang and Yuhang Dong and Junzhe Wu and Yupei Zeng and Haonan Lin and Zifan Wang and Haizhou Ge and Weibin Gu and Chuxuan Li and Ziming Wang and Yunjie Cheng and Wei Sui and Ruqi Huang and Guyue Zhou},
+      journal={arXiv preprint arXiv:2507.21981},
+      year={2025},
+      url={https://arxiv.org/abs/2507.21981}
+}
 ```
