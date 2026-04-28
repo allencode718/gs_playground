@@ -76,6 +76,8 @@ UV_CACHE_DIR=.uv-cache uv run python demo/navigation/robot_locomotion.py --confi
 UV_CACHE_DIR=.uv-cache uv run python demo/navigation/robot_locomotion.py --config configs/g1_scene1.json
 ```
 
+The first navigation launch may take a while to load the robot policy and 3DGS assets. It is ready to use once the 3DGS view appears on the left.
+
 ### Batch Rendering Benchmark
 
 ```bash
@@ -91,8 +93,8 @@ UV_CACHE_DIR=.uv-cache uv run jupyter nbconvert \
 ```bash
 UV_CACHE_DIR=.uv-cache uv run python -m ipykernel install \
   --user \
-  --name gsp-render-dev \
-  --display-name "gsp-render-dev"
+  --name gsplayground \
+  --display-name "gsplayground"
 ```
 
 ## 🗺️ Release Plan
