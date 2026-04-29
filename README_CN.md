@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://gsplayground.github.io"><img src="https://img.shields.io/badge/project-page-brightgreen" alt="Project Page"></a>
-  <a href="https://arxiv.org/abs/XXXX.XXXXX"><img src="https://img.shields.io/badge/paper-arXiv-red" alt="arXiv"></a>
+  <a href="http://arxiv.org/abs/2604.25459"><img src="https://img.shields.io/badge/paper-arXiv%3A2604.25459-red" alt="arXiv"></a>
   <a href="https://huggingface.co/gsplayground"><img src="https://img.shields.io/badge/assets-HuggingFace-yellow" alt="Hugging Face"></a>
   <img src="https://img.shields.io/badge/RSS-2026-blueviolet" alt="RSS 2026">
 </p>
@@ -128,5 +128,13 @@ GS-Playground 建立在我们生态中的多个组件和前序系统之上。它
       journal={arXiv preprint arXiv:2507.21981},
       year={2025},
       url={https://arxiv.org/abs/2507.21981}
+}
+
+@article{jia2026gsplayground,
+      title={GS-Playground: A High-Throughput Photorealistic Simulator for Vision-Informed Robot Learning},
+      author={Yufei Jia and Heng Zhang and Ziheng Zhang and Junzhe Wu and Mingrui Yu and Zifan Wang and Dixuan Jiang and Zheng Li and Chenyu Cao and Zhuoyuan Yu and Xun Yang and Haizhou Ge and Yuchi Zhang and Jiayuan Zhang and Zhenbiao Huang and Tianle Liu and Shenyu Chen and Jiacheng Wang and Bin Xie and Xuran Yao and Xiwa Deng and Guangyu Wang and Jinzhi Zhang and Lei Hao and Zhixing Chen and Yuxiang Chen and Anqi Wang and Hongyun Tian and Yiyi Yan and Zhanxiang Cao and Yizhou Jiang and Hanyang Shao and Yue Li and Lu Shi and Bokui Chen and Wei Sui and Hanqing Cui and Yusen Qin and Ruqi Huang and Lei Han and Tiancai Wang and Guyue Zhou},
+      journal={arXiv preprint arXiv:2604.25459},
+      year={2026},
+      url={https://arxiv.org/abs/2604.25459}
 }
 ```
