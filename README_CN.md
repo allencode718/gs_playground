@@ -2,7 +2,7 @@
 
 <h3 align="center">A High-Throughput Photorealistic Simulator for Vision-Informed Robot Learning</h3>
 
-语言：[English](README.md) | 简体中文
+<p align="center">语言：<a href="README.md">English</a> | 简体中文</p>
 
 <p align="center">
   <a href="https://gsplayground.github.io"><img src="https://img.shields.io/badge/project-page-brightgreen" alt="Project Page"></a>
@@ -118,6 +118,10 @@ GS-Playground 建立在我们生态中的多个组件和前序系统之上。它
 - **RLGK 渲染：** [GaussianRenderer](https://github.com/discoverse-dev/GaussianRenderer) 包含与 Rigid-Link Gaussian Kinematics 相关的 Gaussian rendering 组件。
 - **Batch LiDAR：** [MuJoCo-LiDAR](https://github.com/discoverse-dev/MuJoCo-LiDAR) 是我们此前的 batch LiDAR 模块；GS-Playground 的传感器套件会沿着这条工作整合到 navigation 和 locomotion 任务中。
 - **上一代平台：** [DISCOVERSE](https://github.com/discoverse-dev/discoverse/) 是我们此前的具身仿真平台。GS-Playground 可以看作 DISCOVERSE 的下一代高保真、高吞吐版本。
+
+<p align="center">
+  <img src="media/qrcode.jpg" alt="二维码" width="240">
+</p>
 
 ## 📚 Citation
 
