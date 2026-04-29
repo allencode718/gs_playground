@@ -46,6 +46,13 @@ GS-Playground 是面向视觉机器人学习的高吞吐、高保真仿真框架
 
 大规模训练流水线、完整 benchmark、生成式 3DGS 资产集合、Real2Sim 工具和论文实验配置尚未包含在当前预览版本中。
 
+## 🧰 环境需求
+
+- Linux x86_64。当前预览版本面向 64 位 Linux 系统。
+- NVIDIA GPU 和较新的 Linux 驱动。依赖使用 CUDA 12.8 PyTorch wheel；不需要单独安装本地 CUDA toolkit，但 NVIDIA 驱动需要足够新，以兼容 wheel 中自带的 CUDA runtime。可通过 `nvidia-smi` 检查驱动和 GPU 是否可见。
+- `git`，用于克隆仓库。
+- `uv`，用于解析依赖、创建 Python 环境并运行 demo。不需要手动创建 virtual env。
+
 ## 🛠️ 安装
 
 以下命令均在仓库根目录执行。
@@ -56,7 +63,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 git clone https://github.com/discoverse-dev/gs_playground.git
 cd gs_playground
-UV_CACHE_DIR=.uv-cache uv sync --reinstall-package motrixsim-core
+uv sync
 ```
 
 依赖版本和平台标记由 `pyproject.toml` 与 `uv.lock` 维护。
@@ -66,14 +73,14 @@ UV_CACHE_DIR=.uv-cache uv sync --reinstall-package motrixsim-core
 ### Live Replay Demo
 
 ```bash
-UV_CACHE_DIR=.uv-cache uv run python demo/live_demo/replay.py
+uv run python demo/live_demo/replay.py
 ```
 
 ### Navigation Demo
 
 ```bash
-UV_CACHE_DIR=.uv-cache uv run python demo/navigation/robot_locomotion.py --config configs/go2_scene1.json
-UV_CACHE_DIR=.uv-cache uv run python demo/navigation/robot_locomotion.py --config configs/g1_scene1.json
+uv run python demo/navigation/robot_locomotion.py --config configs/go2_scene1.json
+uv run python demo/navigation/robot_locomotion.py --config configs/g1_scene1.json
 ```
 
 首次启动 navigation 可能需要较长时间加载机器人策略和 3DGS 资产。等左侧 3DGS 渲染窗口出现后即可正常使用。
@@ -81,7 +88,7 @@ UV_CACHE_DIR=.uv-cache uv run python demo/navigation/robot_locomotion.py --confi
 ### Batch Rendering Benchmark
 
 ```bash
-UV_CACHE_DIR=.uv-cache uv run jupyter nbconvert \
+uv run jupyter nbconvert \
   --to notebook \
   --execute benchmark/mtx_batch_minimal.ipynb \
   --ExecutePreprocessor.cwd=benchmark \
@@ -91,7 +98,7 @@ UV_CACHE_DIR=.uv-cache uv run jupyter nbconvert \
 ### 可选 Jupyter Kernel
 
 ```bash
-UV_CACHE_DIR=.uv-cache uv run python -m ipykernel install \
+uv run python -m ipykernel install \
   --user \
   --name gsplayground \
   --display-name "gsplayground"
