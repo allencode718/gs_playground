@@ -46,6 +46,13 @@ The current repository is intentionally small and intended for early reproductio
 
 Large-scale training pipelines, full benchmark suites, generated 3DGS asset collections, Real2Sim tools, and paper experiment configurations are not included in this preview release yet.
 
+## 🧰 Environment Requirements
+
+- Linux x86_64. The preview package is intended for 64-bit Linux systems.
+- NVIDIA GPU with a recent Linux driver. The dependencies use the CUDA 12.8 PyTorch wheel; a local CUDA toolkit installation is not required, but the NVIDIA driver must be new enough for the bundled CUDA runtime. You can check driver visibility with `nvidia-smi`.
+- `git` for cloning the repository.
+- `uv` for dependency resolution, Python environment creation, and running the demos. No manual virtual env setup is required.
+
 ## 🛠️ Installation
 
 Run all commands from this repository root.
@@ -56,7 +63,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 git clone https://github.com/discoverse-dev/gs_playground.git
 cd gs_playground
-UV_CACHE_DIR=.uv-cache uv sync --reinstall-package motrixsim-core
+uv sync
 ```
 
 Dependency versions and platform markers are tracked in `pyproject.toml` and `uv.lock`.
@@ -66,14 +73,14 @@ Dependency versions and platform markers are tracked in `pyproject.toml` and `uv
 ### Live Replay Demo
 
 ```bash
-UV_CACHE_DIR=.uv-cache uv run python demo/live_demo/replay.py
+uv run python demo/live_demo/replay.py
 ```
 
 ### Navigation Demo
 
 ```bash
-UV_CACHE_DIR=.uv-cache uv run python demo/navigation/robot_locomotion.py --config configs/go2_scene1.json
-UV_CACHE_DIR=.uv-cache uv run python demo/navigation/robot_locomotion.py --config configs/g1_scene1.json
+uv run python demo/navigation/robot_locomotion.py --config configs/go2_scene1.json
+uv run python demo/navigation/robot_locomotion.py --config configs/g1_scene1.json
 ```
 
 The first navigation launch may take a while to load the robot policy and 3DGS assets. It is ready to use once the 3DGS view appears on the left.
@@ -81,7 +88,7 @@ The first navigation launch may take a while to load the robot policy and 3DGS a
 ### Batch Rendering Benchmark
 
 ```bash
-UV_CACHE_DIR=.uv-cache uv run jupyter nbconvert \
+uv run jupyter nbconvert \
   --to notebook \
   --execute benchmark/mtx_batch_minimal.ipynb \
   --ExecutePreprocessor.cwd=benchmark \
@@ -91,7 +98,7 @@ UV_CACHE_DIR=.uv-cache uv run jupyter nbconvert \
 ### Optional Jupyter Kernel
 
 ```bash
-UV_CACHE_DIR=.uv-cache uv run python -m ipykernel install \
+uv run python -m ipykernel install \
   --user \
   --name gsplayground \
   --display-name "gsplayground"

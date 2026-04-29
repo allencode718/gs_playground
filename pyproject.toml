@@ -6,8 +6,7 @@ readme = "README.md"
 requires-python = ">=3.10,<3.11"
 dependencies = [
     "motrixsim_core==0.7.1.dev97295",
-    "torch==2.4.1+cu121",
-    "triton==3.0.0",
+    "torch==2.7.0+cu128",
     "gaussian_renderer==0.2.0",
     "gsplat==1.5.3",
     "numpy==2.2.6",
@@ -36,15 +35,13 @@ url = "https://pypi.motphys.com/simple/"
 explicit = true
 
 [[tool.uv.index]]
-name = "pytorch-cu121"
-url = "https://download.pytorch.org/whl/cu121"
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
 explicit = true
 
 [tool.uv.sources]
 motrixsim_core = { index = "motphys-pypi" }
-torch = [
-    { index = "pytorch-cu121", marker = "sys_platform == 'linux' and platform_machine == 'x86_64'" },
-]
+torch = { index = "pytorch-cu128" }
 
 [tool.uv]
 package = false
