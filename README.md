@@ -129,6 +129,7 @@ GS-Playground builds on several components and prior systems from our ecosystem.
 <p align="center">
   <img src="media/qrcode.jpg" alt="QR Code" width="240">
 </p>
+<p align="center">Add the assistant on WeChat to join the group. Please note in your request: <strong>gsp交流</strong></p>
 
 ## 📚 Citation
 

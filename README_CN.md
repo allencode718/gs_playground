@@ -129,6 +129,7 @@ GS-Playground 建立在我们生态中的多个组件和前序系统之上。它
 <p align="center">
   <img src="media/qrcode.jpg" alt="二维码" width="240">
 </p>
+<p align="center">添加小助手的微信进群，请备注：<strong>gsp交流</strong></p>
 
 ## 📚 Citation
 
